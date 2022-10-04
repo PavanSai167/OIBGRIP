@@ -1,0 +1,42 @@
+/* Sets the font of all text to Helvetica and aligns all items to the center */
+body{
+	font-family:helvetica;
+	text-align:center
+}
+
+/* Sets the white space around the converter to 15 pixels */
+#userConverter{
+	padding:15px;
+}
+
+/* Collapses the table, sets the font size to 16, and aligns the table to the center */
+table{
+	margin:auto;
+	font-size:16px;
+	border-collapse:collapse;
+}
+
+/* Sets the white space surrounding the text in the tables to 8 pixels, gives it a solid light grey border,
+aligns the text to the center, and makes the width of the table 50% */
+td, th, #userConverter{
+	padding:8px;
+	border: 1px solid #ddd;
+	margin:auto;
+	width:50%;
+}
+
+/* Sets the heading of the table to 24px, the font to bold, the colow to white, and the background color to blue */
+th{
+	font-size:24px;
+	font-style:bold;
+	color:#ffffff;
+	background-color:#0099ff;
+}
+
+/* Sets all even rows to the color blue */
+tr:nth-child(even) {background-color:#ccebff;}
+
+/* Changes the color of the row to a darker shade of blue when hovered over */
+tr:hover {
+	background-color:#80ccff;
+}

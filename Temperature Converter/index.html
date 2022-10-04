@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Ties the CSS and JS file to this code -->
+	<script src="conversion.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta charset="UTF-8">
+	<title>Temperature Converter</title>
+</head>
+<body>
+	<h1>
+		Temperature Converter
+	</h1>
+	<div>
+		<!-- The user input. Takes the value of the temp as a string and if the user wants to convert to celsius or fahrenheit -->
+		<div id = userConverter>
+			
+			<!-- Gets a the temperature to be converted from the user as a string -->
+			Temperature:<br>
+			<input type=number id="inputTemperature" placeholder="Temperature"/><br>
+			
+			<!-- Gets the unit to be converted to from the user -->
+			Convert to:<br>
+			<select id="convertTo">
+					
+				<option value="celsius">Celsius</option>
+				<option value="fahrenheit">Fahrenheit</option>
+				
+			</select>
+			
+			<!-- Runs the conversion function when the button is clicked -->
+			<button type="button" onclick="userConvert()">Convert!</button>
+			
+			<br>
+
+			<!-- Where the temperature will appear -->
+			<p id="userOutput">Your converted temperature will appear here</p>
+
+		</div>
+
+		<!-- The calculation script. Takes input from the HTML form above -->
+		<script>
+
+			// Defines all variables and changes variables to the user input
+			var userInput = document.getElementById("inputTemperature");
+			var unit = document.getElementById("convertTo");
+			var toConvertedTemp;
+
+			function userConvert() {
+
+				// Changes the value type of temp from a string to a number
+				var temp = parseInt(userInput.value, 10);
+				
+				// if... else if... code that detects if the user wants to convert to celsius or fahrenheit and executes the correct formula
+				if (isNaN(temp)) {
+
+					// Displays an error message if a number wasn't input
+					toConvertedTemp = "You didn't input a number, or there is a glitch in the matrix. Try reloading the page";
+				
+				} else if (unit.value === "celsius") {
+
+					// Conversion formula for celsius
+					toConvertedTemp = (temp - 32) * (5 / 9);
+
+					// Rounds the number to the second decimal place
+					toConvertedTemp = Math.round(toConvertedTemp * 100) / 100;
+
+					// Adds the degree symbol and temperature type to the end of the number value
+					toConvertedTemp = toConvertedTemp + "° C";
+
+				} else if (unit.value === "fahrenheit") {
+
+					// Conversion formula for fahrenheit
+					toConvertedTemp = temp * (9 / 5) + 32;
+
+					// Rounds the number to the second decimal place
+					toConvertedTemp = Math.round(toConvertedTemp * 100) / 100;
+
+					// Adds the degree symbol and temperature type to the end of the number value
+					toConvertedTemp = toConvertedTemp + "° F";
+
+				} else {
+
+					// Error message that runs if there is a problem
+					toConvertedTemp = "You shouldn't be seeing this. It may be a glitch. Actually, you're just a dirty hacker, aren't you?";
+
+				}
+
+			// Sets the value of convertedtemp to the value of toConvertedTemp
+			var convertedTemp = toConvertedTemp;
+
+			// Changes the text of the upper paragraph to the value of the output
+			document.getElementById("userOutput").innerHTML = convertedTemp;
+
+			}
+
+		</script>
+
+		<br>
+		
+		<!-- Defines an HTML table -->
+		<table>
+			<tr>
+				<th>
+					Fahrenheit
+				</th>
+				<th>
+					Celsius
+				</th>
+			</tr>
+
+			<tr>
+				<td>
+					<!-- Prints the value of the number inside -->
+					<script>
+						document.write(20)
+					</script>
+				</td>
+				<td>
+					<!-- Writes the value of the unique array -->
+					<script>
+						document.write(c[20])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(25)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[25])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(30)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[30])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(35)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[35])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(40)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[40])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(45)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[45])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(50)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[50])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(55)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[55])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(60)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[60])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(65)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[65])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(70)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[70])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(75)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[75])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(80)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[80])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(85)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[85])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(90)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[90])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(95)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[95])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(100)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[100])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(105)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[105])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(110)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[110])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(115)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[115])
+					</script>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<script>
+						document.write(120)
+					</script>
+				</td>
+				<td>
+					<script>
+						document.write(c[120])
+					</script>
+				</td>
+			</tr>
+		</table>
+		<p>
+			Made by Pavan
+		</p>
+	</div>
+</body>
+</html>
